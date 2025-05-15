@@ -22,13 +22,16 @@ router.get('/ping', (req: express.Request, res: express.Response): void => {
 })
 
 
-router.get('data/:id', (req: express.Request, res: express.Response): void => {
+router.get('/data/:id', (req: express.Request, res: express.Response): void => {
 
+    console.log('Here')
     // @ts-ignore
     res.send(data[req.params.id])
 })
 
-router.post('data', (req: express.Request, res: express.Response): void => {
+router.post('/data', (req: express.Request, res: express.Response): void => {
+    console.log(req.body)
+
 
     res.send(data[req.body.id])
 })

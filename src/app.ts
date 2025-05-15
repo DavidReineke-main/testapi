@@ -15,7 +15,8 @@ const server = http.createServer(app)
 
 app.set('port', port)
 app.use(morganMiddleware)
-
+app.use(express.json({limit: '50mb'}))
+app.use(express.urlencoded({limit: '50mb', extended: false}))
 app.use(requestIdCreaterMiddleware)
 
 
