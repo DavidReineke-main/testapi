@@ -1,0 +1,17 @@
+{
+  "name": "testapi",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "export NODE_ENV=DEV || set NODE_ENV=DEV&&npx nodemon -e yaml,ts,js -r tsconfig-paths/register src/app.ts"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0"
+  }
+}
