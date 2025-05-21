@@ -38,6 +38,7 @@ router.post('/data', (req: express.Request, res: express.Response): void => {
 
 router.post('/test', (req: express.Request, res: express.Response): void => {
     console.log(req.body)
+    console.log(req.headers)
 
 
     res.status(201).send(data[1])
