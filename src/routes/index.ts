@@ -35,3 +35,10 @@ router.post('/data', (req: express.Request, res: express.Response): void => {
 
     res.send(data[req.body.id])
 })
+
+router.post('/test', (req: express.Request, res: express.Response): void => {
+    console.log(req.body)
+
+
+    res.status(201).send(data[1])
+})
