@@ -36,9 +36,11 @@ router.post('/data', (req: express.Request, res: express.Response): void => {
     res.send(data[req.body.id])
 })
 
-router.post('/test', (req: express.Request, res: express.Response): void => {
+router.all('/*', (req: express.Request, res: express.Response): void => {
     console.log(req.body)
     console.log(req.headers)
+    console.log(req.query)
+    console.log(req.method)
 
 
     res.status(201).send(data[1])
